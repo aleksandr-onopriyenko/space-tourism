@@ -1,9 +1,7 @@
 .navigation {
-  position: relative;
+  position: fixed;
   z-index: 2;
   display: flex;
-  margin-right: -1rem;
-  padding: 0 6rem;
   background-color: transparent;
 
   &.mobile {
@@ -31,6 +29,9 @@
   }
 
   @media (min-width: 768px) {
+    position: relative;
+    padding: 0 6rem;
+    margin-right: -1rem;
     b {
       display: inline;
     }

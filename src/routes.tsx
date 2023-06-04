@@ -1,10 +1,8 @@
 import { Navigate, RouteObject } from "react-router-dom";
-import { Crew, Destination, Home, Technology } from "@pages";
+
 import { Layout } from "@components/Layout";
-import { TECHNOLOGY } from "@constants/technology";
-import { CREW } from "@constants/crew";
-import { HOME } from "@constants/home";
-import { Destination as DESTINATION } from "@constants/destination";
+import { Crew, Destination, Home, Technology } from "@pages";
+import { HOME, CREW, DESTINATION, TECHNOLOGY } from "@constants";
 
 export const ROUTES: RouteObject[] = [
   {

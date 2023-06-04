@@ -3,7 +3,7 @@ import { FC } from "react";
 import "./style.scss";
 
 import { Typoghraphy } from "@components/UI";
-import { Destination } from "@constants/destination";
+import { DESTINATION } from "@constants";
 import { Link, useLoaderData } from "react-router-dom";
 
 interface LoadedHomeData {
@@ -25,7 +25,7 @@ export const Home: FC = () => {
       <div className="home-action">
         <Link
           to="/destination"
-          state={Destination}
+          state={DESTINATION}
           className="home-action__explore"
         >
           Explore

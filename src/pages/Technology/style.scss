@@ -1,0 +1,134 @@
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+
+  .header {
+    width: 100%;
+  }
+
+  &-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    display: flex;
+    align-self: center;
+
+    button {
+      width: 48px;
+      height: 48px;
+      background-color: transparent;
+      color: var(--color);
+      border: 1px solid var(--color-gray);
+      border-radius: 100%;
+      font-size: 1.5rem;
+      font-family: var(--font-serif);
+      transition: background 0.4s, color 0.3s;
+
+      &.active,
+      &:hover {
+        background-color: var(--color);
+        color: var(--color-dark);
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    opacity: 0;
+
+    &.active {
+      transition: opacity 0.3s;
+      opacity: 1;
+    }
+
+    &-description {
+      width: 100%;
+      order: 2;
+
+      h2 {
+        font-size: 1rem;
+        font-family: var(--font-sans-cond);
+        font-weight: var(--font-weight-normal);
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        margin-block: 0;
+        line-height: 1.5;
+        letter-spacing: 4.75px;
+        font-weight: 400;
+        color: var(--color-gray);
+        font-family: var(--font-serif);
+        text-transform: uppercase;
+      }
+
+      p {
+        order: 3;
+        font-size: 1.125rem;
+        line-height: 2;
+        color: var(--color-gray);
+        font-family: var(--font-sans-normal);
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 400px;
+      order: 1;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+
+    &-actions {
+      flex-direction: column;
+      width: fit-content;
+
+      button {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+      }
+    }
+
+    &-content {
+      flex-direction: row;
+      width: calc(100% - 100px);
+
+      &-description {
+        order: 1;
+        width: 52%;
+
+        h3 {
+          font-size: 3.5rem;
+        }
+      }
+
+      &-image {
+        width: 45%;
+        height: auto;
+        order: 2;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
